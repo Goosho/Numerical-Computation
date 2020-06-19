@@ -1,0 +1,77 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1774,         67]
+NotebookOptionsPosition[      1462,         51]
+NotebookOutlinePosition[      1806,         66]
+CellTagsIndexPosition[      1763,         63]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1891", ",", "46"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1901", ",", "66"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1911", ",", "81"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1921", ",", "93"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1931", ",", "101"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{"Interpolation", "[", "data", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", "1895", "]"}], "//", "N"}]}], "Input",
+ CellChangeTimes->{{3.7512579346308985`*^9, 3.7512580478125257`*^9}, {
+  3.7512580790603275`*^9, 3.7512580844737015`*^9}}],
+
+Cell[BoxData["54.728`"], "Output",
+ CellChangeTimes->{{3.7512580368609753`*^9, 3.7512580850665197`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1350, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 760, 23, 72, "Input"],
+Cell[1342, 47, 104, 1, 63, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

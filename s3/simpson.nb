@@ -1,0 +1,120 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3623,        111]
+NotebookOptionsPosition[      3206,         93]
+NotebookOutlinePosition[      3653,        110]
+CellTagsIndexPosition[      3610,        107]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Simpson", "[", 
+    RowBox[{"a0_", ",", "b0_", ",", "m0_"}], "]"}], " ", ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"a", "=", 
+        RowBox[{"N", "[", "a0", "]"}]}], ",", 
+       RowBox[{"b", "=", 
+        RowBox[{"N", "[", "b0", "]"}]}], ",", 
+       RowBox[{"m", "=", 
+        RowBox[{"N", "[", "m0", "]"}]}], ",", "k", ",", "X"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"h", "=", 
+       FractionBox[
+        RowBox[{"b", "-", "a"}], 
+        RowBox[{"2", " ", "m"}]]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       SubscriptBox["X", "k_"], "=", 
+       RowBox[{"a", "+", 
+        RowBox[{"k", " ", "h"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{
+        FractionBox["h", "3"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"f", "[", "a", "]"}], "+", 
+          RowBox[{"f", "[", "b", "]"}], "+", 
+          RowBox[{"2", 
+           RowBox[{
+            UnderoverscriptBox["\[Sum]", 
+             RowBox[{"k", "=", "1"}], 
+             RowBox[{"m", "-", "1"}]], 
+            RowBox[{"f", "[", 
+             SubscriptBox["X", 
+              RowBox[{"2", " ", "k"}]], "]"}]}]}], "+", 
+          RowBox[{"4", 
+           RowBox[{
+            UnderoverscriptBox["\[Sum]", 
+             RowBox[{"k", "=", "1"}], 
+             RowBox[{"   ", "m"}]], 
+            RowBox[{"f", "[", 
+             SubscriptBox["X", 
+              RowBox[{
+               RowBox[{"2", " ", "k"}], "-", "1"}]], "]"}]}]}]}], ")"}]}], 
+       "]"}], ";"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   RowBox[{"x", "^", "3"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Simpson", "[", 
+  RowBox[{"0", ",", "1", ",", "3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.754268057145883*^9, 3.7542681577310038`*^9}, {
+  3.7542682356427355`*^9, 3.7542682958193073`*^9}, {3.7542683411523356`*^9, 
+  3.7542683943383083`*^9}, {3.754268577057227*^9, 3.7542686088261347`*^9}, {
+  3.754268642299058*^9, 3.7542686541020346`*^9}, {3.7542689129884415`*^9, 
+  3.754269098646017*^9}, {3.7542691583861513`*^9, 3.7542691801121225`*^9}, {
+  3.7542692172482553`*^9, 3.754269238515008*^9}, {3.7542700270035768`*^9, 
+  3.754270169921418*^9}, {3.7542702013900404`*^9, 3.754270218095049*^9}, {
+  3.754700042736101*^9, 3.7547000429748697`*^9}}],
+
+Cell[BoxData["0.24999999999999994`"], "Output",
+ CellChangeTimes->{3.7542702195654163`*^9, 3.754700045704564*^9, 
+  3.7547002146910343`*^9}]
+}, Open  ]]
+},
+WindowSize->{798, 398},
+WindowMargins->{{-7, Automatic}, {Automatic, -58}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 2468, 64, 250, "Input"],
+Cell[3050, 88, 140, 2, 68, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

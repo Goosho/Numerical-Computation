@@ -1,0 +1,106 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3036,         96]
+NotebookOptionsPosition[      2792,         83]
+NotebookOutlinePosition[      3137,         98]
+CellTagsIndexPosition[      3094,         95]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Regulafasi", "[", 
+   RowBox[{"a0_", ",", "b0_", ",", "m_"}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{
+     RowBox[{"a", "=", 
+      RowBox[{"N", "[", "a0", "]"}]}], ";", 
+     RowBox[{"b", "=", 
+      RowBox[{"N", "[", "b0", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"c", "=", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"a", " ", 
+         RowBox[{"f", "[", "b", "]"}]}], "-", 
+        RowBox[{"b", " ", 
+         RowBox[{"f", "[", "a", "]"}]}]}], 
+       RowBox[{
+        RowBox[{"f", "[", "b", "]"}], "-", 
+        RowBox[{"f", "[", "a", "]"}]}]]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"k", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{"k", "<", "m"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Sign", "[", 
+            RowBox[{"f", "[", "b", "]"}], "]"}], "\[Equal]", 
+           RowBox[{"Sign", "[", 
+            RowBox[{"f", "[", "c", "]"}], "]"}]}], ",", 
+          RowBox[{"b", "=", "c"}], ",", 
+          RowBox[{
+           RowBox[{"a", "=", "c"}], ";"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"c", "=", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"a", " ", 
+            RowBox[{"f", "[", "b", "]"}]}], "-", 
+           RowBox[{"b", " ", 
+            RowBox[{"f", "[", "a", "]"}]}]}], 
+          RowBox[{
+           RowBox[{"f", "[", "b", "]"}], "-", 
+           RowBox[{"f", "[", "a", "]"}]}]]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"k", "=", 
+         RowBox[{"k", "+", "1"}]}], ";"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<c  =\>\"", ",", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{"c", ",", "16"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<f[c] =\>\"", ",", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{
+         RowBox[{"f", "[", "c", "]"}], ",", "16"}], "]"}]}], "]"}], ";"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.75483046168456*^9, 3.754830735780311*^9}}]
+},
+WindowSize->{707, 636},
+WindowMargins->{{Automatic, 89}, {62, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2231, 61, 279, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

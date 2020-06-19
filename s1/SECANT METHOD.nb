@@ -1,0 +1,162 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5062,        153]
+NotebookOptionsPosition[      4639,        133]
+NotebookOutlinePosition[      4983,        148]
+CellTagsIndexPosition[      4940,        145]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SecantMethod", "[", 
+    RowBox[{"x0_", ",", "x1_", ",", "max_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{
+      RowBox[{"k", "=", "1"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"p0", "=", 
+       RowBox[{"N", "[", "x0", "]"}]}], ";", 
+      RowBox[{"p1", "=", 
+       RowBox[{"N", "[", "x1", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"p2", "=", "p1"}], ";", 
+      RowBox[{"p1", "=", "p0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"While", "[", 
+       RowBox[{
+        RowBox[{"k", "<", "max"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"p0", "=", "p1"}], ";", 
+         RowBox[{"p1", "=", "p2"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"p2", "=", 
+          RowBox[{"p1", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"f", "[", "p1", "]"}], " ", 
+              RowBox[{"(", 
+               RowBox[{"p1", "-", "p0"}], ")"}]}], ")"}], "/", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"f", "[", "p1", "]"}], "-", 
+              RowBox[{"f", "[", "p0", "]"}]}], ")"}]}]}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"k", "=", 
+          RowBox[{"k", "+", "1"}]}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\< p = \>\"", ",", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{"p2", ",", "16"}], "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\< f[p]= \>\"", ",", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"f", "[", "p2", "]"}], ",", "16"}], "]"}]}], "]"}], ";"}]}],
+     "]"}]}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], "=", 
+    RowBox[{
+     RowBox[{"x", "^", "3"}], "+", 
+     RowBox[{"4", "x"}], "-", "7"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"SecantMethod", "[", 
+  RowBox[{"1", ",", "1.5", ",", "5"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.748148756005341*^9, 3.748148756009341*^9}, {
+   3.7481491664923215`*^9, 3.748149185222514*^9}, {3.748149217379846*^9, 
+   3.748149220481564*^9}, {3.7481492756666374`*^9, 3.748149277268956*^9}, {
+   3.748156036968293*^9, 3.7481560379857054`*^9}, {3.7481562719992614`*^9, 
+   3.7481563070642567`*^9}, {3.7481563384233017`*^9, 
+   3.7481564514243126`*^9}, {3.7481565127182407`*^9, 
+   3.7481565137066736`*^9}, {3.7481565452922053`*^9, 
+   3.7481567149829245`*^9}, {3.7482208224587145`*^9, 3.748220886377263*^9}, 
+   3.748220982782888*^9, {3.748221920148464*^9, 3.7482219203888655`*^9}, {
+   3.7482219522365484`*^9, 3.748221954746415*^9}, {3.7548311180172515`*^9, 
+   3.754831135980257*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" p = \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"1.255383119682305\"\>",
+     1.2553831196823053`,
+     AutoDelete->True],
+    NumberForm[#, 16]& ]}],
+  SequenceForm[" p = ", 
+   NumberForm[1.2553831196823053`, 16]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.7481567156165733`*^9, {3.748220823355405*^9, 3.7482208527814703`*^9}, 
+   3.7482219213684735`*^9, 3.748221955937088*^9, {3.754831119345343*^9, 
+   3.7548311287231107`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" f[p]= \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox[
+     RowBox[{"\<\"-3.243523738483134\"\>", "\[Times]", 
+      SuperscriptBox["10", "\<\"-7\"\>"]}],
+     -3.243523738483134*^-7,
+     AutoDelete->True],
+    NumberForm[#, 16]& ]}],
+  SequenceForm[" f[p]= ", 
+   NumberForm[-3.243523738483134*^-7, 16]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.7481567156165733`*^9, {3.748220823355405*^9, 3.7482208527814703`*^9}, 
+   3.7482219213684735`*^9, 3.748221955937088*^9, {3.754831119345343*^9, 
+   3.7548311287231107`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[" "], "Input",
+ CellChangeTimes->{3.748221947791076*^9}]
+},
+WindowSize->{1350, 631},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 2820, 68, 292, "Input"],
+Cell[CellGroupData[{
+Cell[3424, 94, 515, 14, 23, "Print"],
+Cell[3942, 110, 597, 16, 23, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[4566, 130, 69, 1, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
